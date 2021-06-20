@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -14,9 +16,32 @@ body {
     align-items: center;
 }
 
-.header div {
+header {
+    display: flex;
     font-size: 20px;
-    
+    justify-content: space-between;
+}
+
+header p {
+    padding: 20px;
+}
+
+header a {
+    color:black;
+    padding: 20px;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: blue;
+}
+
+.quiz-title h1 {
+    font-size: 50px;
+}
+
+.quiz-title p {
+    font-size: 30px;
 }
 
 .btn {
@@ -42,6 +67,11 @@ body {
     font-weight: bold;
 }
 
+.quiz-title h1 {
+    text-align: center;
+    margin: 35px auto 10px;
+}
+
 .answers {
     display: grid;
     gap: 10px;
@@ -54,6 +84,7 @@ body {
     font-weight: bold;
     padding: 10px 20px;
     display: grid;
+    text-align: center;
 }
 
 .controls {

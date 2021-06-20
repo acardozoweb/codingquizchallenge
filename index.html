@@ -10,37 +10,49 @@
 </head>
 <body>
 
-    <div class="header">
-        <div href="#view-high-scores">View High Scores</div>
-    
-        <div id="timer">
-            <p id="timerDisplay">00:60</p>
-        </div>
-    </div>  
+<!--timer & view scores-->
+    <header class="header">
+        <a href="#" id="see-scores">View High Scores</a>
+        <p> Time:<span id="timer"></span></p>
+    </header>  
 
-    <div id="quiz-title" class="quiz-title hide">
-        <h2 class="hide">QUIZ CHALLENGE</h2>
-        <p class="hide">Try to answer the following questions within the time limit.</p>
-        <p class="hide">Keep in mind that incorrect answers will penalize your time/score by 10 seconds!</p>
+<!--title & instructions-->
+    <div class="quiz-title">
+        <h1>QUIZ CHALLENGE</h1>
+        <p>Try to answer the following questions within the time limit.</p>
+        <p>Keep in mind that incorrect answers will penalize your time/score by 10 seconds!</p>
     </div>
 
-    <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question">Question Placeholder</div>
-        </div>
+<!--quiz display-->
+    <div class="quizDisplay">
+        <h2 id="questionDisplay"></h2>
         <div id="answer-container" class="answers hide">
-                <button id="ans-btn" class="ans-btn btn">Answer1</button>
-                <button id="ans-btn" class="ans-btn btn">Answer2</button>
-                <button id="ans-btn" class="ans-btn btn">Answer3</button>
-                <button id="ans-btn" class="ans-btn btn">Answer4</button>
+                <button type="button" id="ans-btn1" class="ans-btn btn">Answer1</button>
+                <button type="button" id="ans-btn2" class="ans-btn btn">Answer2</button>
+                <button type="button" id="ans-btn3" class="ans-btn btn">Answer3</button>
+                <button type="button" id="ans-btn4" class="ans-btn btn">Answer4</button>
         </div>
-        
+        <p id="right/wrong" class="hide">right or wrong?</p>
+    </div>   
+    
+<!--start & next buttons-->
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
     </div>
-    
+
+<!--game over-->
+<div class="gameOver hide">
+    <h1> That's it!</h1>
+    <p>Your score is</p>
+    <p>Enter initials:
+    <form>
+        <input type="text" id="initials" name="initials" placeholder="your initials">
+        <button type="submit" id="submit-init"></button></p>
+    </form>
+</div>
+
 
 </body>
 </html>
