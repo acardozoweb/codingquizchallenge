@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="./assets/css/stylesheet.css"></style>
-    
+    <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
 
@@ -18,23 +18,29 @@
         </div>
     </div>  
 
+    <div id="quiz-title" class="quiz-title hide">
+        <h2 class="hide">QUIZ CHALLENGE</h2>
+        <p class="hide">Try to answer the following questions within the time limit.</p>
+        <p class="hide">Keep in mind that incorrect answers will penalize your time/score by 10 seconds!</p>
+    </div>
 
     <div class="container">
         <div id="question-container" class="hide">
             <div id="question">Question Placeholder</div>
-            <div id="answer-buttons" class="answers">
-                <button class="btn">Answer1</button>
-                <button class="btn">Answer2</button>
-                <button class="btn">Answer3</button>
-                <button class="btn">Answer4</button>
-            </div>
         </div>
+        <div id="answer-container" class="answers hide">
+                <button id="ans-btn" class="ans-btn btn">Answer1</button>
+                <button id="ans-btn" class="ans-btn btn">Answer2</button>
+                <button id="ans-btn" class="ans-btn btn">Answer3</button>
+                <button id="ans-btn" class="ans-btn btn">Answer4</button>
+        </div>
+        
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
     </div>
     
-    <script href="./assets/js/script.js"></script>
+
 </body>
 </html>

@@ -1,19 +1,72 @@
 const startButton = document.getElementById('start-btn')
+const questionContainerEl = document.getElementById('question-container')
+var questionElement = document.querySelector('question')
+const answerButtonEl = document.getElementById('answer-container')
+const answers = document.getElementById('ans-btn')
+const quizTitle = document.getElementById('quiz-title')
+
+
 
 startButton.addEventListener('click', startGame)
+answerButtonEl.addEventListener('click', checkAnswer)
 
 
 function startGame() {
-console.log('started')
+    console.log(questions[0])
+    startButton.classList.add('hide')
+    questionContainerEl.classList.remove('hide')
+    answerButtonEl.classList.remove('hide')
+    showQuestion()
+    timer()
 }
 
-function showNextQuestion() {
+function timer() {
+    var sec = 60;
+    var timer = setInterval(function () {
+        document.getElementById('timerDisplay').innerHTML = '00:' + sec; sec--;
+        if (sec = 0) {
+            clearInterval(timer);
+            // gameOver() ??
+        }
+        // check answer
+        // if incorrect, deduct 10 sec off timer
+    }, 1000);
+}
+
+function showQuestion() {
+
+
+
+    // document.getElementById("").innerHTML = questions[index].question;
+    // questionElement.innerText = question.question
+    // questions[0].question
+    for (var i = 0; i < questions.length; i++) {
+        var questionElement(questions[i].answers)
+    }
+    // question.answer.forEach(answer => {
+    //     const button = document.createElement('button')
+    //     button.innerText = answer.textbutton.classList.add('btn')
+    //     if (answer.correct) {
+    //         button.dataset.correct = answer.correct
+    //     }
+    //     button.addEventListener('click', chooseAnswer)
+    //     answerButtonEl.appendChild(button)
+    // })
+}
+
+function chooseAnswer(e) {
 
 }
 
-function chooseAnswer () {
+function checkAnswer() {
 
 }
+
+
+
+
+
+
 
 
 
@@ -21,41 +74,51 @@ function chooseAnswer () {
 
 
 // QUIZ QUESTIONS 
-// let questions = [
-//     { question: 'the sun rises in the _____',
-//     answers: [ 
-//         {text: 'north', correct: false},
-//         {text: 'south', correct: false},
-//         {text: 'east', correct: true},
-//         {text: 'west', correct: false},
-//     ]},
-//     { question: 'the last indian residential school in canada closed in what year?',
-//     answers: [
-//         {text: '1956', correct: false},
-//         {text: '1938', correct: false},
-//         {text: '1973', correct: false},
-//         {text: '1996', correct: true}
-//     ]},
-//     { question: 'who did john goodman play in the big lebowski?',
-//     answers: [
-//         {text: 'Donnie', correct: false},
-//         {text: 'Walter', correct: true},
-//         {text: 'Jesus', correct: false},
-//         {text: 'Brandt', correct: false}
-//     ]},
-//     { question: 'what is the capital of ontario?',
-//     answers: [
-//         {text: 'toronto', correct: true},
-//         {text: 'ottawa', correct: false},
-//         {text: 'london', correct: false},
-//         {text: 'kingston', correct: false}
-//     ]},
-//     { question: 'what is the name of the biggest mountain range on the west coast of north america?',
-//     answers: [
-//         {text: 'andes', correct: false},
-//         {text: 'appalacheans', correct: false},
-//         {text: 'alps', correct: false},
-//         {text: 'rockies', correct: true}
-//     ]}
-// ]; 
-// // END OF QUESTIONS
+const questions = [
+    {
+        question: 'Commonly used data type DO NOT include: _______.',
+        answers: [
+            { text: 'strings', correct: false },
+            { text: 'booleans', correct: false },
+            { text: 'alerts', correct: true },
+            { text: 'numbers', correct: false },
+        ]
+    },
+    {
+        question: 'the condition in an if/else statement is enclosed within ________.',
+        answers: [
+            { text: 'quotes', correct: false },
+            { text: 'curle brackets', correct: false },
+            { text: 'parentheses', correct: true },
+            { text: 'square brackets', correct: false }
+        ]
+    },
+    {
+        question: 'arrays in Java Script are used to store _________.',
+        answers: [
+            { text: 'numbers and strings', correct: false },
+            { text: 'other arrays', correct: false },
+            { text: 'booleans', correct: false },
+            { text: 'all of the above', correct: true }
+        ]
+    },
+    {
+        question: 'string values must be enclosed within ________ when being assigned to variables.',
+        answers: [
+            { text: 'commas', correct: false },
+            { text: 'curly brackets', correct: false },
+            { text: 'quotes', correct: true },
+            { text: 'parentheses', correct: false }
+        ]
+    },
+    {
+        question: 'A useful tool for debugging during development for printing content to the debugger is _______',
+        answers: [
+            { text: 'GitBash/Terminal', correct: false },
+            { text: 'console', correct: true },
+            { text: 'Java Script', correct: false },
+            { text: 'for loops', correct: false }
+        ]
+    }
+];
+// END OF QUESTIONS
