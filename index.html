@@ -25,7 +25,7 @@
     </div>
 
 <!--quiz display-->
-    <div class="quizDisplay">
+    <div class="quizDisplay hide">
         <h2 id="questionDisplay"></h2>
         <div id="answer-container" class="answer-buttons">
                 <button type="button" id="ans-btn0" class="ans-btn">Answer1</button>
@@ -33,18 +33,18 @@
                 <button type="button" id="ans-btn2" class="ans-btn">Answer3</button>
                 <button type="button" id="ans-btn3" class="ans-btn">Answer4</button>
         </div>
-        <p id="right/wrong">Are you right or wrong?</p>
+        <p id="right/wrong">result</p>
     </div>   
 
 
 
-<!--game over function-->
+<!--"game over" display-->
 <div class="gameOver">
-    <h1> Aaaand that's it!</h1>
-    <p>Your score is</p>
+    <h1> </h1>
+    <p>Your score is <span class="your-score"></span></p>
     <p>Enter initials:
     <form>
-        <input type="text" id="initials" name="initials" placeholder="your initials">
+        <input type="text" id="initials" name="initials" placeholder="enter your initials here">
         <button type="submit" id="submit-init">Submit</button></p>
     </form>
 </div>
